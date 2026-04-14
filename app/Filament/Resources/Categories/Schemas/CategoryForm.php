@@ -25,10 +25,10 @@ class CategoryForm
                             ->placeholder('Enter category name')
                             ->autocomplete('off')
                             ->required(),
-                        RichEditor::make('description')
+                        Textarea::make('description')
                             ->label('Description')
                             ->placeholder('Enter category description')
-                            ->extraAttributes(['style' => 'min-height: 200px;'])
+                            ->rows(5)
                             ->columnSpanFull(),
                     ])
             ]);

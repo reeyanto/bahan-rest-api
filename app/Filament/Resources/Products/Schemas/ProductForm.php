@@ -28,10 +28,10 @@ class ProductForm
                             ->autocomplete('off')
                             ->columnSpanFull()
                             ->required(),
-                        RichEditor::make('description')
+                        Textarea::make('description')
                             ->label('Description')
                             ->placeholder('Enter product description')
-                            ->extraAttributes(['style' => 'min-height: 200px;'])
+                            ->rows(5)
                             ->columnSpanFull(),
                         TextInput::make('price')
                             ->label('Price')
