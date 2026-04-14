@@ -6,7 +6,6 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -18,6 +17,7 @@ class ProductsTable
         return $table
             ->columns([
                 ImageColumn::make('image')
+                    ->disk('public')
                     ->label('Image')
                     ->square(),
                 TextColumn::make('name')

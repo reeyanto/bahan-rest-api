@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\Products\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -59,6 +58,7 @@ class ProductForm
                             ->required(),
                         FileUpload::make('image')
                             ->image()
+                            ->disk('public')
                             ->directory('product-images')
                             ->columnSpanFull(),
                 ]),
