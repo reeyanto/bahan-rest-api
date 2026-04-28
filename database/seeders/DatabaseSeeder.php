@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,5 +19,13 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
         ]);
+
+        $categories = ['Berita Nasional', 'Film'];
+        foreach($categories as $category) {
+            Category::create([
+                'name' => $category,
+                'description' => 'Tambahkan deskripsi sendiri'
+            ]);
+        }
     }
 }
